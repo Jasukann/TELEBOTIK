@@ -28,5 +28,6 @@ class GetPrice:
         r = requests.get(
             f'https://v6.exchangerate-api.com/v6/0dd5ef33d8841058544ab992/pair/{base_ticker}/{quote_ticker}')
         total_base = json.loads(r.content)['conversion_rate']
-
-        return total_base
+        total_base = float(json.loads(r.content)['conversion_rate'])
+        convertion_base = total_base * sum
+        return convertion_basetal_base
